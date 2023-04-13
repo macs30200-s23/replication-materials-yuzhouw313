@@ -6,20 +6,25 @@ maxTweets = 1000
 attr_col = ['Datetime', 'Tweet Id', 'Text', 'Username']
 
 
-
 def scrape_by_month(target, output):
+    ''' 
+    Function to web scrape all one month of tweets containing word A
+    Input:
+        target(str): The command to webscrape including keyword and date bound
+        output(str): The output csv file name
+    '''
+
     lst = []
-    for i,tweet in enumerate(sntwitter.TwitterSearchScraper(target).get_items()):
-        if i>maxTweets:
+    for i, tweet in enumerate(sntwitter.TwitterSearchScraper(target).get_items()):
+        if i > maxTweets:
             break
         lst.append([tweet.date, tweet.id, tweet.content, tweet.user.username])
 
     df = pd.DataFrame(lst, columns=attr_col)
     df.to_csv(output, sep=',', index=False)
 
-    return
 
-
+# Call the above function for 12 months and generate corresponding csv files
 scrape_by_month('chink since:2020-01-01 until:2020-01-31', 'jan2020-tweets.csv')
 scrape_by_month('chink since:2020-02-01 until:2020-02-29', 'feb2020-tweets.csv')
 scrape_by_month('chink since:2020-03-01 until:2020-03-31', 'mar2020-tweets.csv')
