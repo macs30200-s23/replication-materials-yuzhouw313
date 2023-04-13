@@ -9,26 +9,40 @@ H4: Offline anti-Chinese hate sentiment will be causal of anti-Chinese online ha
 
 
 ## Dataset
-Data are collected using snsscrape created by Martin Beck
+Twitter data are collected using snsscrape created by Martin Beck.
 
-Tweets are collected by the keyword list of Sinophobia sentiment heavy words found by Shen et al., their research article can be found [here](https://ojs.aaai.org/index.php/ICWSM/article/view/19348).
+Specifically, all tweets are collected by the keyword list of Sinophobia sentiment heavy words found by Shen et al., their research article can be found [here](https://ojs.aaai.org/index.php/ICWSM/article/view/19348).
 
-I chose the top 5 most frequently occurring words towards combined hateful weight vectors, which are "chink," "chinaman," "chyna," "chinkland," and "gook." They represent the traditional racial slurs againt the Chinese population and China.
+I chose the top 4 most frequently occurring words towards combined hateful weight vectors, which are "chink," "chinaman," "chyna," "chinkland." They represent the traditional racial slurs againt the Chinese population and China.
 
 Additionally, I also chose the 2 often related to Sinophobiac sentiment triggered by COVID-19 -- "wuhanvirus and chinesevirus." They are newly emerged racial slurs direcly related to the coronavirus pandemic.
 
 MartinKBeck. (2021). snscrape: A Social Networking Service scraper in Python. GitHub repository. Retrieved Month Day, Year, from https://github.com/MartinKBeck/TwitterScraper/tree/master/snscrape
 
 
-- twitter_a.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_a.py): Web scrape code to obtain the tweets containing keywords of word A in 2020 and 2021
+## Files and Folders
+- Tweets containing word A from 1/1/2020 to 12/31/2021
+    - twitter_a.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_a.py): Web scrape code to obtain the tweets
+    - tweet-part-A [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-A): Data folder of all A related tweets
 
-- twitter_b.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_b.py): Web scrape code to obtain the tweets containing keywords of word B in 2020 and 2021
+- Tweets containing word B from 1/1/2020 to 12/31/2021
+    - twitter_a.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_a.py): Web scrape code to obtain the tweets
+    - tweet-part-B [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-B): Data folder of all B related tweets
 
-- twitter_c.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_c.py): Web scrape code to obtain the tweets containing keywords of word C in 2020 and 2021
+- Tweets containing word C from 1/1/2020 to 12/31/2021
+    - twitter_c.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_c.py): Web scrape code to obtain the tweets
+    - tweet-part-C [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-C): Data folder of all C related tweets
 
-- twitter_d.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_d.py): Web scrape code to obtain the tweets containing keywords of word D in 2020 and 2021
+- Tweets containing word D from 1/1/2020 to 12/31/2021
+    - twitter_d.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_d.py): Web scrape code to obtain the tweets
+    - tweet-part-D [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-D): Data folder of all D related tweets
 
-- twitter_e.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_e.py): Web scrape code to obtain the tweets containing keywords of word E in 2020 and 2021
+- Tweets containing word E from 1/1/2020 to 12/31/2021
+    - twitter_e.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_e.py): Web scrape code to obtain the tweets
+    - tweet-part-E [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-E): Data folder of all E related tweets
 
-- twitter_f.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_f.py): Web scrape code to obtain the tweets containing keywords of word F in 2020 and 2021
+- Tweets containing word F from 1/1/2020 to 12/31/2021
+    - twitter_f.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_f.py): Web scrape code to obtain the tweets
+    - tweet-part-F [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-F): Data folder of all F related tweets
+
 
