@@ -22,6 +22,19 @@ def scrape_by_month(target, output):
     df.to_csv(output, sep=',', index=False)
 
 
+scrape_by_month('chyna since:2020-01-01 until:2020-01-31', 'Cjan2020-tweets.csv')
+scrape_by_month('chyna since:2020-02-01 until:2020-02-29', 'Cfeb2020-tweets.csv')
+scrape_by_month('chyna since:2020-03-01 until:2020-03-31', 'Cmar2020-tweets.csv')
+scrape_by_month('chyna since:2020-04-01 until:2020-04-30', 'Capr2020-tweets.csv')
+scrape_by_month('chyna since:2020-05-01 until:2020-05-31', 'Cmay2020-tweets.csv')
+scrape_by_month('chyna since:2020-06-01 until:2020-06-30', 'Cjun2020-tweets.csv')
+scrape_by_month('chyna since:2020-07-01 until:2020-07-31', 'Cjul2020-tweets.csv')
+scrape_by_month('chyna since:2020-08-01 until:2020-08-31', 'Caug2020-tweets.csv')
+scrape_by_month('chyna since:2020-09-01 until:2020-09-30', 'Csep2020-tweets.csv')
+scrape_by_month('chyna since:2020-10-01 until:2020-10-31', 'Coct2020-tweets.csv')
+scrape_by_month('chyna since:2020-11-01 until:2020-11-30', 'Cnov2020-tweets.csv')
+scrape_by_month('chyna since:2020-12-01 until:2020-12-31', 'Cdec2020-tweets.csv')
+
 scrape_by_month('chyna since:2021-01-01 until:2021-01-31', 'Cjan2021-tweets.csv')
 scrape_by_month('chyna since:2021-02-01 until:2021-02-28', 'Cfeb2021-tweets.csv')
 scrape_by_month('chyna since:2021-03-01 until:2021-03-31', 'Cmar2021-tweets.csv')
