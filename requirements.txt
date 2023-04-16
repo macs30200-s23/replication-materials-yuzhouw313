@@ -1,0 +1,7 @@
+python == 3.9.12
+snscrape == 0.6.2.20230320
+pandas == 1.4.2
+datetime == 4.7
+re == 2022.3.15
+nltk == 3.7
+matplotlib == 3.5.1
