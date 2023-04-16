@@ -1,0 +1,10 @@
+cff-version: 1.15.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Wang
+    given-names: Yuzhou
+    orcid: https://orcid.org/0009-0005-1443-0532
+title: "The relationship between online Sinophobic sentiment and anti-Chinese hate crimes"
+version: 1.0.0
+date-released: 2023-04-16
+url: "https://github.com/macs30200-s23/replication-materials-yuzhouw313"
