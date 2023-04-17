@@ -30,7 +30,7 @@ Specifically, all tweets are filtered by the keyword list of Sinophobia sentimen
 
 I chose the top 5 most frequently occurring words towards combined hateful weight vectors, which are "chink," "chinaman," "chyna," "chinkland," and "gook." They represent the traditional racial slurs againt the Chinese population and China.
 
-The dataset consists of total 303989 tweets collected via Twitter from 2020/1/1 to 2020/12/31. The original data can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/twitter%20data) and the code to scrape the data can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/scrape.ipynb)
+The dataset consists of total <i>303989</i> tweets collected via Twitter from 2020/1/1 to 2020/12/31. The original data can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/twitter%20data) and the code to scrape the data can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/scrape.ipynb)
 
 An example of the Twitter DataFrame looks like this
 | Datetime                   | Tweet Id             | Username       | Text                                             | 
@@ -40,7 +40,7 @@ An example of the Twitter DataFrame looks like this
 
 
 ### FBI Data
-The original FBI Hate Crime Statistical Dataset csv file can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/hate_crime.csv) which ranges from 1991 to 2021. However, I will preprocess the dataset and convert it into a DataFrame which contains all anti-Asian hate crimes from the year 2020
+The original FBI Hate Crime Statistical Dataset csv file can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/hate_crime.csv) which ranges from 1991 to 2021. However, I will preprocess the dataset and convert it into a DataFrame which contains all anti-Asian hate crimes from the year 2020, which has a size of <i>356</i> anti-Asian hate crime incidents
 
 An example of FBI data looks like this: ![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/FBI_df.png)
 
