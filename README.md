@@ -42,31 +42,11 @@ An example of the Twitter DataFrame looks like this
 ### FBI Data
 The original FBI Hate Crime Statistical Dataset csv file can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/hate_crime.csv) which ranges from 1991 to 2021. However, I will preprocess the dataset and convert it into a DataFrame which contains all anti-Asian hate crimes from the year 2020
 
+An example of FBI data looks like this: ![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/Screenshot%202023-04-16%20at%2020.24.44.png)
 
-## Files and Folders
-- Tweets containing word A from 1/1/2020 to 12/31/2021
-    - twitter_a.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_a.py): Web scrape code to obtain the tweets
-    - tweet-part-A [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-A): Data folder of all A related tweets
 
-- Tweets containing word B from 1/1/2020 to 12/31/2021
-    - twitter_a.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_a.py): Web scrape code to obtain the tweets
-    - tweet-part-B [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-B): Data folder of all B related tweets
+## Preliminary Results
 
-- Tweets containing word C from 1/1/2020 to 12/31/2021
-    - twitter_c.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_c.py): Web scrape code to obtain the tweets
-    - tweet-part-C [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-C): Data folder of all C related tweets
-
-- Tweets containing word D from 1/1/2020 to 12/31/2021
-    - twitter_d.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_d.py): Web scrape code to obtain the tweets
-    - tweet-part-D [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-D): Data folder of all D related tweets
-
-- Tweets containing word E from 1/1/2020 to 12/31/2021
-    - twitter_e.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_e.py): Web scrape code to obtain the tweets
-    - tweet-part-E [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-E): Data folder of all E related tweets
-
-- Tweets containing word F from 1/1/2020 to 12/31/2021
-    - twitter_f.py [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_f.py): Web scrape code to obtain the tweets
-    - tweet-part-F [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-F): Data folder of all F related tweets
 
 
 ## References:
