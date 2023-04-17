@@ -112,7 +112,8 @@ After preprocessing and aggregating our FBI Hate Crime Dataset, we conducted tim
 
 ![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/crime_rolling.png)
 
-<span style="color:red">Notice that, when comparing the monthly rolling means for Twitter anti-Chinese dataset and FBI anti-Asian hate crime dataset, we see a delaying trend in the former. That is, the increase and spike of the FBI anti-Asian Hate Crimes precede those of the Twitter data.</span>
+
+### Notice that, when comparing the monthly rolling means for Twitter anti-Chinese dataset and FBI anti-Asian hate crime dataset, we see a delaying trend in the former. That is, the increase and spike of the FBI anti-Asian Hate Crimes precede those of the Twitter data. Although without further statistical analysis and causality test we cannot conclude any correlation or causality between the two variables, we can have a sense of the order or prediction power of these two variables.
 
 
 ## How to Cite
