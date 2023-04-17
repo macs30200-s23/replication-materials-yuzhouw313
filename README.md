@@ -48,3 +48,5 @@ MartinKBeck. (2021). snscrape: A Social Networking Service scraper in Python. Gi
     - tweet-part-F [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/tweet-part-F): Data folder of all F related tweets
 
 
+References:
+Jacobs, L., & van Spanje, J. (2021). A Time-Series Analysis of Contextual-Level Effects on Hate Crime in The Netherlands. Social Forces, 100(1), 169–193. https://doi.org/10.1093/sf/soaa102
