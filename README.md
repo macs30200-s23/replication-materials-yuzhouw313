@@ -42,7 +42,7 @@ An example of the Twitter DataFrame looks like this
 ### FBI Data
 The original FBI Hate Crime Statistical Dataset csv file can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/hate_crime.csv) which ranges from 1991 to 2021. However, I will preprocess the dataset and convert it into a DataFrame which contains all anti-Asian hate crimes from the year 2020
 
-An example of FBI data looks like this: ![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/Screenshot%202023-04-16%20at%2020.24.44.png)
+An example of FBI data looks like this: ![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/FBI_df.png)
 
 
 ## Preliminary Results
