@@ -45,6 +45,25 @@ The original FBI Hate Crime Statistical Dataset csv file can be found [here](htt
 An example of FBI data looks like this: ![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/FBI_df.png)
 
 
+## Methods
+### Twitter Dataset
+[Jupyter Notebook to Analyze Twitter Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_analysis.ipynb)
+- Use nltk package to (1) lowercase all tweets, (2) remove irrelavent components such as URLs, (3) remove stop words, (4) lemmatize, and (5) stem all tweets
+- Use SentimentIntensityAnalyzer to compute negative, positive, neutral, and compound sentiment scores for each preprocessed tweet
+- Conduct some basic statistics analysis to get mean, median, std, min, and quartiles
+- Conduct time series analysis using both day and month as unit of analysis, calculating rolling means and trend analysis for both short-term and long-term patterns
+- Visualization
+
+### FBI Dataset
+[Jupyter Notebook to Analyze FBI Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/crime_analysis.ipynb)
+- Filter hate crime incidents of 2020 and desciption bias of anti-Asian
+- Aggregate Dataframe by monthly hate crime incidents instead of individual incident for the sake of statistical significance
+- Visualize the trend of anti-Asian hate crime incidents using bar graph
+- Calculate basic statistics such as monthly mean, median, standard deviation, etc.
+- Using statsmodels to conduct time series analysis and obtaining rolling means and trend analysis
+- Visualization
+
+
 ## Preliminary Results
 ### Twitter Dataset
 After preprocessing the Twitter dataset and conducting sentiment analysis using nltk package, I proceeded into time series analysis I found some patterns:
