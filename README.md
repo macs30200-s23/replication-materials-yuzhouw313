@@ -7,17 +7,17 @@ expressed on social media and real-life crimes against the Chinese population du
 Jacobs and van Spanje argue that research into the contextual-level factors driving hate crimes is scant and evidence about their origin from a broad societal perspective remains largely anecdotal (2021, p. 170). In this study, I aim to analyze the relationship, such as correlational, predictionary, and causal, between online anti-Chinese sentiment and real-life anti-Chinese crimes.
 
 Below are four hypotheses: 
-H1: Online anti-Chinese hate sentiment will be predictive of anti-Chinese offline hate crime incidents in the United States.
-H2: Offline anti-Chinese hate sentiment will be predictive of anti-Chinese online hate crime incidents in the United States.
-H3: Online anti-Chinese hate sentiment will be causal of anti-Chinese offline hate crime incidents in the United States.
-H4: Offline anti-Chinese hate sentiment will be causal of anti-Chinese online hate crime incidents in the United States.
+- H1: Online anti-Chinese hate sentiment will be predictive of anti-Chinese offline hate crime incidents in the United States.
+- H2: Offline anti-Chinese hate sentiment will be predictive of anti-Chinese online hate crime incidents in the United States.
+- H3: Online anti-Chinese hate sentiment will be causal of anti-Chinese offline hate crime incidents in the United States.
+- H4: Offline anti-Chinese hate sentiment will be causal of anti-Chinese online hate crime incidents in the United States.
 
 
 ## Dependencies
 The libraries required to replicate this analysis can be found in requirements.txt [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/requirements.txt)
 
 ```python
-conda create -n <environment-name> --file requirements.txt
+pip install -r requirements.txt
 ```
 
 
