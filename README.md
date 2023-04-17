@@ -110,6 +110,41 @@ After preprocessing and aggregating our FBI Hate Crime Dataset, we conducted tim
 - based on the rolling means, we see that the average number of hate crimes per month increased from March to May (29 to 49.67), indicating a potential spike in hate crimes during that period. However, the rolling mean decreased from May to June (49.67 to 44.33), suggesting that the number of hate crimes may have decreased in June. The rolling mean then decreased further from June to July (44.33 to 36.33) and continued to decrease gradually until December (20.67), indicating a general downward trend in the number of hate crimes.
 - based on trend analysis, we see that the number of hate crimes per month decreased from January (36.25) to December (22.55), suggesting a general downward trend in the number of hate crimes throughout the year. The negative trend value (-1.69) indicates that the time series data is decreasing over time.
 
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/crime_rolling.png)
+
+<span style="color:red">Notice that, when comparing the monthly rolling means for Twitter anti-Chinese dataset and FBI anti-Asian hate crime dataset, we see a delaying trend in the former. That is, the increase and spike of the FBI anti-Asian Hate Crimes precede those of the Twitter data.</span>
+
+
+## How to Cite
+```python
+cff-version: 1.15.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Wang
+    given-names: Yuzhou
+    orcid: https://orcid.org/0009-0005-1443-0532
+title: "The relationship between online Sinophobic sentiment and anti-Chinese hate crimes"
+version: 1.0.0
+date-released: 2023-04-16
+url: "https://github.com/macs30200-s23/replication-materials-yuzhouw313"
+```
+
+APA Format
+```python
+Wang, Y. (2023). The relationship between online Sinophobic sentiment and anti-Chinese hate crimes (Version 1.0.0) [Computer software]. https://github.com/macs30200-s23/replication-materials-yuzhouw313
+```
+
+BibTeX Format
+```python
+@software{Wang_The_relationship_between_2023,
+author = {Wang, Yuzhou},
+month = {4},
+title = {{The relationship between online Sinophobic sentiment and anti-Chinese hate crimes}},
+url = {https://github.com/macs30200-s23/replication-materials-yuzhouw313},
+version = {1.0.0},
+year = {2023}
+}
+```
 
 
 ## References:
