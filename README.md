@@ -47,6 +47,68 @@ An example of FBI data looks like this: ![alt text](https://github.com/macs30200
 
 ## Preliminary Results
 ### Twitter Dataset
+After preprocessing the Twitter dataset and conducting sentiment analysis using nltk package, I proceeded into time series analysis I found some patterns:
+- <b><i>Compound Sentiment Analysis</i></b>
+  - Just by observing the compound scores of the twitter dataset, we see frequent variations among both positive and negative sentiments, indicating the constant fluctuations for Sinophobic sentiment on Twitter
+
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/sentiment_compound.png)
+  
+- <b><i>Monthly Rolling Means Analysis -- Short-Term</i></b>
+
+  - This rolling mean shows the average sentiment score over a period of time, with each data point representing the average score for the previous 3 months.
+  - For this particular rolling mean, we can see that the sentiment score started off high in February 2020, but then sharply decreased in March and April before stabilizing around a slightly negative sentiment score for the rest of the year.
+  - One interesting point to note is the sudden spike in sentiment score in September and October, which suggests a temporary shift in sentiment towards a more positive outlook, before returning to a slightly negative sentiment score in the final months of the year.
+
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/rolling_monthly.png)
+
+- <b><i>Daily Rolling Means Analysis -- Short-Term</i></b>
+  - Notice here, however, if we don't aggregate tweets into monthly but instead analyze them in a daily basis, we see again the constant and seemingly patternless plot as shown below
+
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/rolling_daily.png)
+
+
+### FBI Hate Crime Dataset
+1. Anti-Asian Hate Crime in 2020 Visualization
+
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/monthly_crime.png)
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/bimonthly_crime.png)
+
+
+Rolling Mean:
+|                |   hate_crimes |
+|:---------------|--------------:|
+| 2020-01-01     |           nan |
+| 2020-02-01     |           nan |
+| 2020-03-01     |        29     |
+| 2020-04-01     |        39.67  |
+| 2020-05-01     |        49.67  |
+| 2020-06-01     |        44.33  |
+| 2020-07-01     |        36.33  |
+| 2020-08-01     |        28     |
+| 2020-09-01     |        24.67  |
+| 2020-10-01     |        24.67  |
+| 2020-11-01     |        24     |
+| 2020-12-01     |        20.67  |
+
+Trend Analysis:
+Date       | Value
+---        | ---
+2020-01-01 | 36.246475
+2020-02-01 | 35.155348
+2020-03-01 | 34.052817
+2020-04-01 | 32.914256
+2020-05-01 | 31.728130
+2020-06-01 | 30.493585
+2020-07-01 | 29.217434
+2020-08-01 | 27.911808
+2020-09-01 | 26.586828
+2020-10-01 | 25.247043
+2020-11-01 | 23.898512
+2020-12-01 | 22.547764
+
+After preprocessing and aggregating our FBI Hate Crime Dataset, we conducted time series analysis and found that
+- based on the rolling means, we see that the average number of hate crimes per month increased from March to May (29 to 49.67), indicating a potential spike in hate crimes during that period. However, the rolling mean decreased from May to June (49.67 to 44.33), suggesting that the number of hate crimes may have decreased in June. The rolling mean then decreased further from June to July (44.33 to 36.33) and continued to decrease gradually until December (20.67), indicating a general downward trend in the number of hate crimes.
+- based on trend analysis, we see that the number of hate crimes per month decreased from January (36.25) to December (22.55), suggesting a general downward trend in the number of hate crimes throughout the year. The negative trend value (-1.69) indicates that the time series data is decreasing over time.
 
 
 
