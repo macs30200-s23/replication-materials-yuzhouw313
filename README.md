@@ -16,8 +16,11 @@ Below are four hypotheses:
 ## Dependencies
 The libraries required to replicate this analysis can be found in requirements.txt [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/requirements.txt)
 
+The code is written in Python 3.9.12 and all of its dependencies can be installed by running in the terminal:
+
+
 ```python
-pip install -r requirements.txt
+conda install -r requirements.txt
 ```
 
 
