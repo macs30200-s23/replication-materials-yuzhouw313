@@ -1,0 +1,5 @@
+Causality Test,p-value at Lag 1,p-value at Lag 2,p-value at Lag 3,p-value at Lag 4,p-value at Lag 5,p-value at Lag 6,p-value at Lag 7,p-value at Lag 8,p-value at Lag 9,p-value at Lag 10,p-value at Lag 11,p-value at Lag 12,p-value at Lag 13,p-value at Lag 14,p-value at Lag 15
+Daily Sinophobic Tweets → Daily Google Search on Old Sinophobic Terms,0.871,0.936,0.886,0.890,0.948,0.979,0.990,0.908,0.920,0.881,0.886,0.914,0.941,0.956,0.971
+Daily Sinophobic Tweets → Daily Google Search on New Sinophobic Terms,0.867,0.981,0.988,0.997,0.999,1.000,0.932,0.952,0.973,0.980,0.955,0.970,0.957,0.955,0.953
+Daily Google Search on Old Sinophobic Terms → Daily Sinophobic Tweets,0.743,0.901,0.945,0.985,0.994,0.999,0.998,0.999,1.000,1.000,1.000,1.000,1.000,1.000,1.000
+Daily Google Search on New Sinophobic Terms → Daily Sinophobic Tweets,0.857,0.980,0.982,0.992,0.998,0.998,0.997,0.929,0.924,0.883,0.619,0.601,0.682,0.650,0.670
