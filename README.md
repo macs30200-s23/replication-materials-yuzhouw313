@@ -69,19 +69,29 @@ An example of preprocessed FBI data looks like this:
 - Conduct time series analysis using both day and month as unit of analysis, calculating rolling means and trend analysis for both short-term and long-term patterns
 - Visualization
 
-### Google search Dataset
+### Google search Dataset EDA
 - [Jupyter Notebook to Analyze Google Search Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_google_analysis.ipynb)
 - Aggregate data by daily and weekly level
 - Visualize the trends
 - Using statsmodels to conduct time series analysis 
 
-### FBI Dataset
+### FBI Dataset EDA
 [Jupyter Notebook to Analyze FBI Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/crime_analysis.ipynb)
 - Filter hate crime incidents of 2020 and desciption bias of anti-Asian
 - Aggregate Dataframe by Weekly hate crime incidents instead of individual incident for the sake of statistical significance
 - Visualize the trend of anti-Asian hate crime incidents
 - Calculate basic statistics such as monthly mean, median, standard deviation, etc.
 - Using statsmodels to conduct time series analysis
+
+### [VAR (Vector Autoregression) Model](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/granger_causality.ipynb)
+- Estimate the long-run relationship among Tweets, Google searches, and hate crimes
+- Regress each variable on its own past values as well as past values of all other variables
+
+### [Granger Gausality Test](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/granger_causality.ipynb)
+- Summarize the estimated parameters obtained from the VAR model
+- Establish the presence and direction of Granger causality between two variables
+- Trend X at time t should provide insights to predict trend Y at time t + 1
+
 
 
 ## Results
