@@ -87,70 +87,27 @@ An example of preprocessed FBI data looks like this:
 ## Results
 ### EDA on Twitter, Google search, and hate crime time series objects
 
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/plots/weekly_tweets.png)
 
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/sentiment_compound.png)
-  
-- <b><i>Monthly Rolling Means Analysis -- Short-Term</i></b>
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/plots/weekly_google.png)
 
-  - This rolling mean shows the average sentiment score over a period of time, with each data point representing the average score for the previous 3 months.
-  - For this particular rolling mean, we can see that the sentiment score started off high in February 2020, but then sharply decreased in March and April before stabilizing around a slightly negative sentiment score for the rest of the year.
-  - One interesting point to note is the sudden spike in sentiment score in September and October, which suggests a temporary shift in sentiment towards a more positive outlook, before returning to a slightly negative sentiment score in the final months of the year.
+![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/plots/weekly_crime.png)
 
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/rolling_monthly.png)
+1. A sharp increase in both the trends of Sinophobic tweets and of anti-Asian hate crimes shortly after the first case of COVID-19 in the US
+2. While the trend of Sinophobic Tweets remained high from April to June, anti-Asian hate crimes decreased after March
+3. Traditional Sinophobic searches > COVID-19-related searches except from mid-Jan to mid-Feb 
+4. COVID-19-related Sinophobic searches decreased after the CDC announced the official name
+5. Traditional Sinophobic searches persisted at high levels, COVID-19-related searches and hate crimes decreased in April
 
-- <b><i>Daily Rolling Means Analysis -- Short-Term</i></b>
-  - Notice here, however, if we don't aggregate tweets into monthly but instead analyze them in a daily basis, we see again the constant and seemingly patternless plot as shown below
+### Daily Granger Causality
+<img width="1750" height="80" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/aab826d8-0cb7-4190-9cd0-dd8bd28645ae">
 
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/rolling_daily.png)
+### Weekly Granger Causality
+<img width="1750" height="250" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/3ca54952-ae4b-4315-a930-e087148b9714">
 
-
-### FBI Hate Crime Dataset
-1. Anti-Asian Hate Crime in 2020 Visualization
-
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/monthly_crime.png)
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/bimonthly_crime.png)
-
-
-Rolling Mean:
-|                |   hate_crimes |
-|:---------------|--------------:|
-| 2020-01-01     |           nan |
-| 2020-02-01     |           nan |
-| 2020-03-01     |        29     |
-| 2020-04-01     |        39.67  |
-| 2020-05-01     |        49.67  |
-| 2020-06-01     |        44.33  |
-| 2020-07-01     |        36.33  |
-| 2020-08-01     |        28     |
-| 2020-09-01     |        24.67  |
-| 2020-10-01     |        24.67  |
-| 2020-11-01     |        24     |
-| 2020-12-01     |        20.67  |
-
-Trend Analysis:
-Date       | Value
----        | ---
-2020-01-01 | 36.246475
-2020-02-01 | 35.155348
-2020-03-01 | 34.052817
-2020-04-01 | 32.914256
-2020-05-01 | 31.728130
-2020-06-01 | 30.493585
-2020-07-01 | 29.217434
-2020-08-01 | 27.911808
-2020-09-01 | 26.586828
-2020-10-01 | 25.247043
-2020-11-01 | 23.898512
-2020-12-01 | 22.547764
-
-After preprocessing and aggregating our FBI Hate Crime Dataset, we conducted time series analysis and found that
-- based on the rolling means, we see that the average number of hate crimes per month increased from March to May (29 to 49.67), indicating a potential spike in hate crimes during that period. However, the rolling mean decreased from May to June (49.67 to 44.33), suggesting that the number of hate crimes may have decreased in June. The rolling mean then decreased further from June to July (44.33 to 36.33) and continued to decrease gradually until December (20.67), indicating a general downward trend in the number of hate crimes.
-- based on trend analysis, we see that the number of hate crimes per month decreased from January (36.25) to December (22.55), suggesting a general downward trend in the number of hate crimes throughout the year. The negative trend value (-1.69) indicates that the time series data is decreasing over time.
-
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/crime_rolling.png)
-
-
-### Notice that, when comparing the monthly rolling means for Twitter anti-Chinese dataset and FBI anti-Asian hate crime dataset, we see a delaying trend in the former. That is, the increase and spike of the FBI anti-Asian Hate Crimes precede those of the Twitter data. Although without further statistical analysis and causality test we cannot conclude any correlation or causality between the two variables, we can have a sense of the order or prediction power of these two variables.
+1. No Granger causality between Sinophobic Tweets and Google searches on traditional or COVID-19-related terms on daily or weekly basis
+2. Anti-Asian hate crimes Granger causes Sinophobic Tweets 4 weeks later
+3. Anti-Asian hate crimes Granger causes Google searches on Sinophobic terms 2 weeks later
 
 
 ## How to Cite
