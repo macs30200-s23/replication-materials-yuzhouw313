@@ -120,6 +120,27 @@ An example of preprocessed FBI data looks like this:
 3. Anti-Asian hate crimes Granger causes Google searches on Sinophobic terms 2 weeks later
 
 
+## Discussion
+### Limitation
+1. Keywords only capture traditional Sinophobia on Twitter
+2. Keywords may not embody Sinophobic sentiment
+3. Alternative meaning of keywords
+4. FBI dataset subjects to underreporting issues
+5. Anti-Asian hate crimes not ideally representative of anti-Chinese violence
+
+### Social Significance
+1. Demonstrate the Granger causality between public sentiment using social media and search engine and real-life violence against the Chinese
+2. Challenge the assumption that public sentiment on social media always aligns with search engine trends
+3. Contribute to existing literatures of relationships between hate crimes and online sentiment in COVID-19, add new dimensions of Google searches as a measures of public sentiment
+
+### Future Research
+- Political rhetoric -> online Sinophobia and anti-Chinese violence?
+- Social media and search engine -> broadcasting Sinophobia?
+- Normalizing of Sinophobic language -> increasing Sinophobia?
+- Social media platform regulations -> addressing racist hate speech?
+
+
+
 ## How to Cite
 ```python
 cff-version: 1.15.0
