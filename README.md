@@ -1,16 +1,13 @@
 # Analysis of Twitter Sinophobic Sentiment and Real-Life Hate Crimes Against the Chinese and Asian Population
 
 ## Introduction
-The code and data in this repository is used to answer the research question “Is there any relationship between anti-Chinese public sentiment 
-expressed on social media and real-life crimes against the Chinese population during the COVID-19 pandemic?”
+<b>Research Project:</b>
+- From Tweets and Google searches to hate crimes: 
+Analyzing the relationship between online Sinophobia and offline anti-Chinese violence during COVID-19
+
+The code and data in this repository is used to answer the research question “How is Sinophobic sentiment expressed online during the COVID-19 pandemic related to incidents of real-life violence against the Chinese population?”
 
 Jacobs and van Spanje argue that research into the contextual-level factors driving hate crimes is scant and evidence about their origin from a broad societal perspective remains largely anecdotal (2021, p. 170). In this study, I aim to analyze the relationship, such as correlational, predictionary, and causal, between online anti-Chinese sentiment and real-life anti-Chinese crimes.
-
-Below are four hypotheses: 
-- H1: Online anti-Chinese hate sentiment will be predictive of anti-Chinese offline hate crime incidents in the United States.
-- H2: Offline anti-Chinese hate sentiment will be predictive of anti-Chinese online hate crime incidents in the United States.
-- H3: Online anti-Chinese hate sentiment will be causal of anti-Chinese offline hate crime incidents in the United States.
-- H4: Offline anti-Chinese hate sentiment will be causal of anti-Chinese online hate crime incidents in the United States.
 
 
 ## Dependencies
@@ -29,51 +26,67 @@ conda install -r requirements.txt
 - FBI Hate Crime Statistical Dataset is obtained directly from FBI's Crime Data Explorer [here](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/hate-crime).
 
 ### Twitter Data
-Specifically, all tweets are filtered by the keyword list of Sinophobia sentiment heavy words found by Shen and colleagues (2022, p. 947), their research article can be found [here](https://ojs.aaai.org/index.php/ICWSM/article/view/19348).
-
-I chose the top 5 most frequently occurring words towards combined hateful weight vectors, which are "chink," "chinaman," "chyna," "chinkland," and "gook." They represent the traditional racial slurs againt the Chinese population and China.
-
-The dataset consists of total <i>303989</i> tweets collected via Twitter from 2020/1/1 to 2020/12/31. The original data can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/twitter%20data) and the code to scrape the data can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/scrape.ipynb)
+- Proxy to capture the frequency and normalization of the use of Sinophobic words
+- Tweets are filtered by Sinophobic keywords found and used by [Shen and colleagues (2022, p. 947)](https://ojs.aaai.org/index.php/ICWSM/article/view/19348)
+- I chose the top 5 most frequently occurring words towards combined hateful weight vectors, which are "chink," "chinaman," "chyna," "chinkland," and "gook." They represent the traditional racial slurs againt the Chinese population and China.
+- The dataset consists of total <i>303989</i> tweets collected via Twitter from 2020/1/1 to 2020/12/31. The original data can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/twitter%20data) and the code to scrape the data can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/scrape.ipynb)
 
 An example of the Twitter DataFrame looks like this
-| Datetime                   | Tweet Id             | Username       | Text                                             | 
-| --------                   | --------             | --------       | --------                                         |
-| 2020-01-08 23:54:31+00:00  | 1215059236725706757  | ItsEstaFiesta  | Meghan Markle did what y’all though Blac Chyna...| 
+| Datetime                   | Tweet Id             | Username       | Text                                                     | 
+| --------                   | --------             | --------       | --------                                                 |
+| 2020-03-13 23:49:38+00:00	 | 1238613218425073664  | Phallossus     | Slap the shit out of anyone tries to give me Chinaman flu| 
 
+
+### Google Search Data
+- Proxy to capture people’s general interest and concern over Sinophobic words and topics
+- Old search terms: chink, chinaman, chinkland, gook
+- New search terms: China virus, Chinese virus, Wuhan virus, Kung flu
+- [Google search dataset](https://github.com/macs30200-s23/replication-materials-yuzhouw313/tree/main/Google%20data) is collected from [Google Trends website](https://trends.google.com/home)
+
+An example of the Google search DataFrame looks like this
+| Day            | chink + chinaman + chinkland + gook: (United States)|
+| --------       | -------                                             |
+| 2020-01-01		 | 59                                                  |
 
 
 ### FBI Data
-The original FBI Hate Crime Statistical Dataset csv file can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/hate_crime.csv) which ranges from 1991 to 2021. However, I will preprocess the dataset and convert it into a DataFrame which contains all anti-Asian hate crimes from the year 2020, which has a size of <i>356</i> anti-Asian hate crime incidents
+- The original FBI Hate Crime Statistical Dataset csv file can be found [here](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/hate_crime.csv) which ranges from 1991 to 2021
+- I preprocessed the dataset and converted it into a DataFrame which contains all anti-Asian hate crimes from the year 2020, which has a size of <i>356</i> anti-Asian hate crime incidents
+- First, the law enforcement officer recording an incident decides whether it might constitute a hate crime. Second, potential hate crime cases are evaluated by officers with special training in hate crime matters. The FBI (2015) states (p. 35): “For an incident to be reported as a hate crime, sufficient objective facts must be present to lead a reasonable and prudent person to conclude that the offenders actions were motivated, in whole or in part, by bias.”
 
-First, the law enforcement officer recording an incident decides whether it might constitute a hate crime. Second, potential hate crime cases are evaluated by officers with special training in hate crime matters. The FBI (2015) states (p. 35): “For an incident to be reported as a hate crime, sufficient objective facts must be present to lead a reasonable and prudent person to conclude that the offenders actions were motivated, in whole or in part, by bias.”
-
-An example of FBI data looks like this: ![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/FBI_df.png)
+An example of preprocessed FBI data looks like this:
+| incident_date  | count|
+| --------       | -----|
+| 2020-01-05		 | 2    |
 
 
 ## Methods
-### Twitter Dataset
-[Jupyter Notebook to Analyze Twitter Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_analysis.ipynb)
+### Twitter Dataset EDA
+[Jupyter Notebook to Analyze Twitter Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_google_analysis.ipynb)
 - Use nltk package to (1) lowercase all tweets, (2) remove irrelavent components such as URLs, (3) remove stop words, (4) lemmatize, and (5) stem all tweets
 - Use SentimentIntensityAnalyzer to compute negative, positive, neutral, and compound sentiment scores for each preprocessed tweet
 - Conduct some basic statistics analysis to get mean, median, std, min, and quartiles
 - Conduct time series analysis using both day and month as unit of analysis, calculating rolling means and trend analysis for both short-term and long-term patterns
 - Visualization
 
+### Google search Dataset
+- [Jupyter Notebook to Analyze Google Search Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_google_analysis.ipynb)
+- Aggregate data by daily and weekly level
+- Visualize the trends
+- Using statsmodels to conduct time series analysis 
+
 ### FBI Dataset
 [Jupyter Notebook to Analyze FBI Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/crime_analysis.ipynb)
 - Filter hate crime incidents of 2020 and desciption bias of anti-Asian
-- Aggregate Dataframe by monthly hate crime incidents instead of individual incident for the sake of statistical significance
-- Visualize the trend of anti-Asian hate crime incidents using bar graph
+- Aggregate Dataframe by Weekly hate crime incidents instead of individual incident for the sake of statistical significance
+- Visualize the trend of anti-Asian hate crime incidents
 - Calculate basic statistics such as monthly mean, median, standard deviation, etc.
-- Using statsmodels to conduct time series analysis and obtaining rolling means and trend analysis
-- Visualization
+- Using statsmodels to conduct time series analysis
 
 
-## Preliminary Results
-### Twitter Dataset
-After preprocessing the Twitter dataset and conducting sentiment analysis using nltk package, I proceeded into time series analysis I found some patterns:
-- <b><i>Compound Sentiment Analysis</i></b>
-  - Just by observing the compound scores of the twitter dataset, we see frequent variations among both positive and negative sentiments, indicating the constant fluctuations for Sinophobic sentiment on Twitter
+## Results
+### EDA on Twitter, Google search, and hate crime time series objects
+
 
 ![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/pictures_README/sentiment_compound.png)
   
