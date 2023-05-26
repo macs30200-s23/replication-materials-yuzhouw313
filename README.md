@@ -98,11 +98,11 @@ An example of preprocessed FBI data looks like this:
 ## Results
 ### EDA on Twitter, Google search, and hate crime time series objects
 
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/plots/weekly_tweets.png)
+<img width="800" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/2293657b-2ec6-4ec9-ad07-4888142f50ed">
 
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/plots/weekly_google.png)
+<img width="800" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/7cdd3af6-6300-48e1-aa48-46bfd05545bb">
 
-![alt text](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/plots/weekly_crime.png)
+<img width="800" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/d636693c-a596-4546-acc5-1cee2f00aca5">
 
 1. A sharp increase in both the trends of Sinophobic tweets and of anti-Asian hate crimes shortly after the first case of COVID-19 in the US
 2. While the trend of Sinophobic Tweets remained high from April to June, anti-Asian hate crimes decreased after March
