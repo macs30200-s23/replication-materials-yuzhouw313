@@ -1,4 +1,4 @@
-# Analysis of Twitter Sinophobic Sentiment and Real-Life Hate Crimes Against the Chinese and Asian Population
+# From Tweets and Google Searches to Hate Crimes: The Relationship Between Online Sinophobia and Offline Anti-Chinese Violence During COVID-19
 
 ## Introduction
 <b>Research Project:</b>
@@ -83,6 +83,10 @@ An example of preprocessed FBI data looks like this:
 - Calculate basic statistics such as monthly mean, median, standard deviation, etc.
 - Using statsmodels to conduct time series analysis
 
+### [Pearson Coefficient of Correlation](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/correlation.ipynb)
+- Pearson's R, also known as the Pearson correlation coefficient, is a statistical measure that quantifies the linear relationship between two continuous variables. 
+- It is denoted by the symbol "r" and ranges from -1 to 1. A value of 1 indicates a perfect positive linear relationship, -1 indicates a perfect negative linear relationship, and 0 indicates no linear relationship between the variables. Pearson's R measures the strength and direction of the linear association, providing insights into the degree of association between two variables
+
 ### [VAR (Vector Autoregression) Model](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/granger_causality.ipynb)
 - Estimate the long-run relationship among Tweets, Google searches, and hate crimes
 - Regress each variable on its own past values as well as past values of all other variables
@@ -109,11 +113,37 @@ An example of preprocessed FBI data looks like this:
 4. COVID-19-related Sinophobic searches decreased after the CDC announced the official name
 5. Traditional Sinophobic searches persisted at high levels, COVID-19-related searches and hate crimes decreased in April
 
+### Daily Pearson Coefficient of Correlation
+<img width="450" height="130" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/plots/Pearson%20Daily.png">
+
+- The correlation coefficient between "twitter" and "google_old" is approximately -0.064. This indicates that on a daily level, there is a weak negative correlation between the number of tweets on Sinophobia discourse and the frequency of Google inqueries on the traditional Sinophobic terms.
+
+- The correlation coefficient between "twitter" and "google_new" is approximately 0.025. This indicates that on a daily level, there is a very weak positive correlation between the number of tweets on Sinophobia discourse and the frequency of Google inqueries on the new Sinophobic terms.
+
+- The correlation coefficient between "google_old" and "google_new" is approximately 0.102. This indicates that on a daily level, there is a relatively substantive positive correlation between the frequencies of Google inqueries on the new and the traditional sets Sinophobic terms.
+
+
+### Weekly Pearson Coefficient of Correlation
+<img width="450" height="130" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/plots/Pearson%20Weekly.png">
+
+- The correlation coefficient between "twitter" and "google_old" is approximately 0.347. This indicates that on a weekly level, there is a relatively strong positive linear correlation between the number of tweets on Sinophobia discourse and the frequency of Google inqueries on the traditional Sinophobic terms.
+
+- The correlation coefficient between "twitter" and "google_new" is approximately -0.157. This indicates that on a weekly level, there is a weak negative correlation between the number of tweets on Sinophobia discourse and the frequency of Google inqueries on the new Sinophobic terms.
+
+- The correlation coefficient between "twitter" and "crime" is approximately 0.364. This indicates that on a weekly level, there is a relatively strong positive correlation between the number of tweets on Sinophobia discourse and incidents of anti-Asian hate crimes. 
+
+- The correlation coefficient between "google_old" and "crime" is approximately 0.007. This indicates that on a weekly level, there is a relatively weak correlation between the frequency of Google inqueries on the traditional Sinophobic terms and incidents of anti-Asian hate crimes.
+
+- The correlation coefficient between "google_new" and "crime" is approximately 0.238. This indicates a relatively substansive correlation between the frequency of Google inqueries on the new Sinophobic terms and incidents of anti-Asian hate crimes.
+
+
 ### Daily Granger Causality
-<img width="1750" height="80" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/aab826d8-0cb7-4190-9cd0-dd8bd28645ae">
+![image](https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/92aae8dc-07ae-4a15-bbe6-48461c1b27be)
+
 
 ### Weekly Granger Causality
-<img width="1750" height="250" alt="image" src="https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/3ca54952-ae4b-4315-a930-e087148b9714">
+![image](https://github.com/macs30200-s23/replication-materials-yuzhouw313/assets/112440950/f47c5655-90b1-4725-8483-794394375e6f)
+
 
 1. No Granger causality between Sinophobic Tweets and Google searches on traditional or COVID-19-related terms on daily or weekly basis
 2. Anti-Asian hate crimes Granger causes Sinophobic Tweets 4 weeks later
@@ -121,10 +151,17 @@ An example of preprocessed FBI data looks like this:
 
 
 ## Discussion
+### Main Takeaway
+1. The study identifies a positive correlation between the weekly number of tweets containing Sinophobic keywords and the frequency of Google searches on traditional Sinophobic terms, but no causality between the two
+2. The Pearson correlation coefficient shows significant and positive correlations between incidents of anti-Asian hate crimes and the number of tweets containing Sinophobic keywords, as well as the frequency of Google searches on both new and traditional Sinophobic slurs
+3. Granger causality tests indicate that anti-Asian hate crimes can help predict the use of Sinophobic slurs on Twitter and the frequency of Google searches on traditional Sinophobic terms
+4. The study highlights the impact of significant public events, such as former President Trump's use of the term "Chinese virus," on the increase in Sinophobic sentiment and hate crimes
+
+
 ### Limitation
-1. Keywords only capture traditional Sinophobia on Twitter
-2. Keywords may not embody Sinophobic sentiment
-3. Alternative meaning of keywords
+1. Keywords only capture traditional Sinophobia on Twitter and may not embody Sinophobic sentiment
+2. Twitter itself is not representative of online sentiment on Sinophobia
+3. A lack of geological information may undermine the study's representativeness and generalizability
 4. FBI dataset subjects to underreporting issues
 5. Anti-Asian hate crimes not ideally representative of anti-Chinese violence
 
@@ -138,7 +175,6 @@ An example of preprocessed FBI data looks like this:
 - Social media and search engine -> broadcasting Sinophobia?
 - Normalizing of Sinophobic language -> increasing Sinophobia?
 - Social media platform regulations -> addressing racist hate speech?
-
 
 
 ## How to Cite
