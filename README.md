@@ -61,22 +61,19 @@ An example of preprocessed FBI data looks like this:
 
 
 ## Methods
-### Twitter Dataset EDA
-[Jupyter Notebook to Analyze Twitter Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_google_analysis.ipynb)
+### [Twitter Dataset EDA](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_google_analysis.ipynb)
 - Use nltk package to (1) lowercase all tweets, (2) remove irrelavent components such as URLs, (3) remove stop words, (4) lemmatize, and (5) stem all tweets
 - Use SentimentIntensityAnalyzer to compute negative, positive, neutral, and compound sentiment scores for each preprocessed tweet
 - Conduct some basic statistics analysis to get mean, median, std, min, and quartiles
 - Conduct time series analysis using both day and month as unit of analysis, calculating rolling means and trend analysis for both short-term and long-term patterns
 - Visualization
 
-### Google search Dataset EDA
-- [Jupyter Notebook to Analyze Google Search Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_google_analysis.ipynb)
+### [Google search Dataset EDA](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/twitter_google_analysis.ipynb)
 - Aggregate data by daily and weekly level
 - Visualize the trends
 - Using statsmodels to conduct time series analysis 
 
-### FBI Dataset EDA
-[Jupyter Notebook to Analyze FBI Data](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/crime_analysis.ipynb)
+### [FBI Dataset EDA](https://github.com/macs30200-s23/replication-materials-yuzhouw313/blob/main/FBI_hatecrime/crime_analysis.ipynb)
 - Filter hate crime incidents of 2020 and desciption bias of anti-Asian
 - Aggregate Dataframe by Weekly hate crime incidents instead of individual incident for the sake of statistical significance
 - Visualize the trend of anti-Asian hate crime incidents
